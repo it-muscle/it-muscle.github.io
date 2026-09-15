@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Support — IT-Muscle Fitness</title>
+  <style>
+    :root {
+      --bg: #f9f9f7;
+      --surface: #ffffff;
+      --text: #1a1a2e;
+      --muted: #5a5a72;
+      --accent: #2563eb;
+      --accent-light: #eff4ff;
+      --border: #e4e4ef;
+      --navy: #0f1e3c;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root:not([data-theme="light"]) {
+        --bg: #0d0f1a;
+        --surface: #141726;
+        --text: #e8e8f0;
+        --muted: #8888aa;
+        --accent: #4f85f6;
+        --accent-light: #1a233a;
+        --border: #252840;
+        --navy: #0f1e3c;
+      }
+    }
+    :root[data-theme="dark"] {
+      --bg: #0d0f1a;
+      --surface: #141726;
+      --text: #e8e8f0;
+      --muted: #8888aa;
+      --accent: #4f85f6;
+      --accent-light: #1a233a;
+      --border: #252840;
+      --navy: #0f1e3c;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif;
+      font-size: 16px;
+      line-height: 1.7;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background: var(--navy);
+      padding: 36px 24px 32px;
+      text-align: center;
+    }
+    .header-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: rgba(255,255,255,0.1);
+      border: 1px solid rgba(255,255,255,0.15);
+      border-radius: 999px;
+      padding: 6px 16px 6px 10px;
+      margin-bottom: 16px;
+    }
+    .header-badge span {
+      color: rgba(255,255,255,0.85);
+      font-size: 13px;
+      font-weight: 500;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+    }
+    header h1 {
+      color: #ffffff;
+      font-size: clamp(22px, 5vw, 32px);
+      font-weight: 700;
+      margin: 0 0 10px;
+      letter-spacing: -0.02em;
+    }
+    .header-meta {
+      color: rgba(255,255,255,0.55);
+      font-size: 13px;
+    }
+
+    main {
+      max-width: 700px;
+      margin: 0 auto;
+      padding: 48px 24px 80px;
+    }
+
+    section {
+      margin-bottom: 48px;
+    }
+
+    h2 {
+      font-size: 18px;
+      font-weight: 700;
+      color: var(--text);
+      margin: 0 0 16px;
+      padding-bottom: 8px;
+      border-bottom: 1px solid var(--border);
+      letter-spacing: -0.01em;
+    }
+
+    p {
+      margin: 0 0 12px;
+      color: var(--text);
+    }
+
+    ul {
+      margin: 6px 0 12px;
+      padding-left: 20px;
+    }
+    li {
+      margin-bottom: 6px;
+      color: var(--text);
+    }
+
+    a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+    a:hover { text-decoration: underline; }
+
+    .contact-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 28px 28px;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .contact-row {
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+    }
+    .contact-icon {
+      width: 40px;
+      height: 40px;
+      border-radius: 10px;
+      background: var(--accent-light);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+    .contact-icon svg { display: block; }
+    .contact-label {
+      font-size: 11px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--muted);
+      margin-bottom: 2px;
+    }
+    .contact-value {
+      font-size: 15px;
+      color: var(--text);
+      font-weight: 500;
+    }
+    .contact-value a { color: var(--accent); }
+
+    .response-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: var(--accent-light);
+      border: 1px solid var(--accent);
+      border-radius: 999px;
+      padding: 4px 12px;
+      font-size: 13px;
+      color: var(--accent);
+      font-weight: 500;
+      margin-top: 4px;
+    }
+
+    .faq-list {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+    .faq-item {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 16px 20px;
+    }
+    .faq-q {
+      font-weight: 600;
+      font-size: 15px;
+      color: var(--text);
+      margin: 0 0 6px;
+    }
+    .faq-a {
+      font-size: 14px;
+      color: var(--muted);
+      margin: 0;
+      line-height: 1.6;
+    }
+    .faq-a a { color: var(--accent); }
+
+    footer {
+      background: var(--surface);
+      border-top: 1px solid var(--border);
+      padding: 32px 24px;
+      text-align: center;
+    }
+    footer p {
+      color: var(--muted);
+      font-size: 13px;
+      margin: 0 0 4px;
+    }
+    footer a { color: var(--accent); }
+    .footer-nav {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      margin-bottom: 16px;
+    }
+    .footer-nav a {
+      font-size: 13px;
+      color: var(--accent);
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="header-badge">
+    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M8 1C4.13 1 1 4.13 1 8s3.13 7 7 7 7-3.13 7-7-3.13-7-7-7zm1 11H7v-2h2v2zm0-4H7V4h2v4z" fill="rgba(255,255,255,0.85)"/>
+    </svg>
+    <span>Support</span>
+  </div>
+  <h1>IT-Muscle Fitness</h1>
+  <p class="header-meta">We're here to help</p>
+</header>
+
+<main>
+
+  <section>
+    <h2>Contact Us</h2>
+    <div class="contact-card">
+      <div class="contact-row">
+        <div class="contact-icon">
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M2.5 5.5A1.5 1.5 0 014 4h12a1.5 1.5 0 011.5 1.5v9A1.5 1.5 0 0116 16H4a1.5 1.5 0 01-1.5-1.5v-9zM4 5.5v.47l6 3.75 6-3.75V5.5H4zM16 7.47l-5.72 3.58a.5.5 0 01-.56 0L4 7.47V14.5h12V7.47z" fill="#2563eb"/>
+          </svg>
+        </div>
+        <div>
+          <div class="contact-label">Email</div>
+          <div class="contact-value"><a href="mailto:support@it-muscle.com">support@it-muscle.com</a></div>
+          <div class="response-badge">
+            <svg width="8" height="8" viewBox="0 0 8 8"><circle cx="4" cy="4" r="4" fill="#22c55e"/></svg>
+            Typically responds within 48 hours
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Frequently Asked Questions</h2>
+    <div class="faq-list">
+
+      <div class="faq-item">
+        <p class="faq-q">How do I restore my purchase?</p>
+        <p class="faq-a">Open the app → tap the profile icon → Subscription → "Restore Purchases". Your purchase is tied to your Apple ID, not your device. You can restore it on any device signed in with the same Apple ID.</p>
+      </div>
+
+      <div class="faq-item">
+        <p class="faq-q">Can I request a refund?</p>
+        <p class="faq-a">Refunds are handled by Apple, not IT-Muscle. Visit <a href="https://reportaproblem.apple.com" target="_blank" rel="noopener">reportaproblem.apple.com</a> and sign in with your Apple ID to request a refund within 14 days of purchase.</p>
+      </div>
+
+      <div class="faq-item">
+        <p class="faq-q">Is my data backed up?</p>
+        <p class="faq-a">All data is stored locally on your device. If you have iCloud Backup enabled for IT-Muscle Fitness (Settings → Your Name → iCloud → IT-Muscle Fitness), your data will be included in your iCloud backup and restored when you reinstall the app.</p>
+      </div>
+
+      <div class="faq-item">
+        <p class="faq-q">What happens if I delete the app?</p>
+        <p class="faq-a">Deleting the app removes all locally stored data. Your purchase is retained by Apple and can be restored after reinstalling. If iCloud Backup was enabled, your workout and nutrition data can also be restored.</p>
+      </div>
+
+      <div class="faq-item">
+        <p class="faq-q">Does the app work offline?</p>
+        <p class="faq-a">Yes — almost everything works offline. Food barcode scanning and the food search require an internet connection to query the Open Food Facts database. All workout logging, progress tracking, and calculators work fully offline.</p>
+      </div>
+
+      <div class="faq-item">
+        <p class="faq-q">How do I connect Apple Health?</p>
+        <p class="faq-a">Go to the app's Settings tab → Health Integration. You'll be prompted to grant permission. IT-Muscle can read steps, active energy, and heart rate, and write body weight and workout data to Health.</p>
+      </div>
+
+      <div class="faq-item">
+        <p class="faq-q">What's the difference between Basic and Pro?</p>
+        <p class="faq-a">Basic ($2.99) unlocks unlimited workout logging and exercise library access. Pro ($9.99) includes everything in Basic plus Apple Health integration, nutrition analytics, and all fitness calculators. Both are one-time purchases — no subscriptions.</p>
+      </div>
+
+      <div class="faq-item">
+        <p class="faq-q">I found a bug. How do I report it?</p>
+        <p class="faq-a">Email <a href="mailto:support@it-muscle.com">support@it-muscle.com</a> with your iOS version, app version (found in Settings → About), and a description of what happened. Screenshots are always helpful.</p>
+      </div>
+
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="footer-nav">
+    <a href="/">Home</a>
+    <a href="/privacy">Privacy Policy</a>
+    <a href="/terms">Terms of Use</a>
+  </div>
+  <p>© 2026 IT-Muscle. All rights reserved.</p>
+  <p><a href="mailto:support@it-muscle.com">support@it-muscle.com</a></p>
+</footer>
+
+</body>
+</html>
