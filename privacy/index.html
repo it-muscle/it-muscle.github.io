@@ -1,0 +1,298 @@
+<title>Privacy Policy — IT-Muscle Fitness</title>
+<style>
+  :root {
+    --bg: #f9f9f7;
+    --surface: #ffffff;
+    --text: #1a1a2e;
+    --muted: #5a5a72;
+    --accent: #2563eb;
+    --accent-light: #eff4ff;
+    --border: #e4e4ef;
+    --navy: #0f1e3c;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #0d0f1a;
+      --surface: #141726;
+      --text: #e8e8f0;
+      --muted: #8888aa;
+      --accent: #4f85f6;
+      --accent-light: #1a233a;
+      --border: #252840;
+      --navy: #0f1e3c;
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #0d0f1a;
+    --surface: #141726;
+    --text: #e8e8f0;
+    --muted: #8888aa;
+    --accent: #4f85f6;
+    --accent-light: #1a233a;
+    --border: #252840;
+    --navy: #0f1e3c;
+  }
+
+  *, *::before, *::after { box-sizing: border-box; }
+
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif;
+    font-size: 16px;
+    line-height: 1.7;
+    margin: 0;
+    padding: 0;
+  }
+
+  header {
+    background: var(--navy);
+    padding: 36px 24px 32px;
+    text-align: center;
+  }
+  .header-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: rgba(255,255,255,0.1);
+    border: 1px solid rgba(255,255,255,0.15);
+    border-radius: 999px;
+    padding: 6px 16px 6px 10px;
+    margin-bottom: 16px;
+  }
+  .header-badge svg {
+    flex-shrink: 0;
+  }
+  .header-badge span {
+    color: rgba(255,255,255,0.85);
+    font-size: 13px;
+    font-weight: 500;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+  }
+  header h1 {
+    color: #ffffff;
+    font-size: clamp(22px, 5vw, 32px);
+    font-weight: 700;
+    margin: 0 0 10px;
+    letter-spacing: -0.02em;
+  }
+  .header-meta {
+    color: rgba(255,255,255,0.55);
+    font-size: 13px;
+  }
+
+  .summary-banner {
+    background: var(--accent-light);
+    border-left: 3px solid var(--accent);
+    padding: 16px 20px;
+    margin: 0;
+    font-size: 15px;
+    color: var(--text);
+  }
+  .summary-banner strong {
+    color: var(--accent);
+  }
+
+  main {
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 40px 24px 80px;
+  }
+
+  section {
+    margin-bottom: 40px;
+  }
+
+  h2 {
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--text);
+    margin: 0 0 12px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid var(--border);
+    letter-spacing: -0.01em;
+  }
+
+  h3 {
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--text);
+    margin: 20px 0 6px;
+  }
+
+  p {
+    margin: 0 0 12px;
+    color: var(--text);
+  }
+
+  ul {
+    margin: 6px 0 12px;
+    padding-left: 20px;
+  }
+  li {
+    margin-bottom: 4px;
+    color: var(--text);
+  }
+
+  .highlight-box {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 16px 20px;
+    margin: 12px 0;
+  }
+  .highlight-box p { margin-bottom: 0; }
+
+  a {
+    color: var(--accent);
+    text-decoration: none;
+  }
+  a:hover { text-decoration: underline; }
+
+  .no-collect-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+    margin: 12px 0;
+  }
+  @media (max-width: 500px) {
+    .no-collect-grid { grid-template-columns: 1fr; }
+  }
+  .no-collect-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 10px 12px;
+    font-size: 14px;
+  }
+  .no-collect-item .icon {
+    color: #22c55e;
+    font-size: 15px;
+    flex-shrink: 0;
+    margin-top: 1px;
+  }
+
+  footer {
+    background: var(--surface);
+    border-top: 1px solid var(--border);
+    padding: 32px 24px;
+    text-align: center;
+  }
+  footer p {
+    color: var(--muted);
+    font-size: 13px;
+    margin: 0 0 4px;
+  }
+  footer a { color: var(--accent); }
+  .footer-tagline {
+    font-style: italic;
+    color: var(--muted);
+    font-size: 13px;
+    margin-top: 16px !important;
+  }
+</style>
+
+<header>
+  <div class="header-badge">
+    <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+      <path d="M8 1a7 7 0 100 14A7 7 0 008 1zm0 2a5 5 0 110 10A5 5 0 018 3z" fill="rgba(255,255,255,0.6)"/>
+      <path d="M8 6.5a1 1 0 100-2 1 1 0 000 2zM7 8.5h2v3H7v-3z" fill="rgba(255,255,255,0.85)"/>
+    </svg>
+    <span>Privacy Policy</span>
+  </div>
+  <h1>IT-Muscle Fitness</h1>
+  <p class="header-meta">Effective: September 8, 2026 &nbsp;·&nbsp; Last updated: September 8, 2026</p>
+</header>
+
+<div class="summary-banner">
+  <strong>Short version:</strong> IT-Muscle stores all your personal data locally on your device. We do not collect, transmit, or sell any personal information. There are no accounts and no server-side data storage.
+</div>
+
+<main>
+  <section>
+    <h2>Information We Collect</h2>
+    <h3>Data You Enter</h3>
+    <p>All data you enter — food logs, workout sessions, body measurements, weight entries, progress photos, and settings — is stored exclusively in a local SQLite database on your device.</p>
+    <div class="highlight-box">
+      <p><strong>This data never leaves your device</strong> unless you explicitly export it.</p>
+    </div>
+
+    <h3>Data We Do NOT Collect</h3>
+    <div class="no-collect-grid">
+      <div class="no-collect-item"><span class="icon">✓</span><span>No name or contact info</span></div>
+      <div class="no-collect-item"><span class="icon">✓</span><span>No user accounts required</span></div>
+      <div class="no-collect-item"><span class="icon">✓</span><span>No usage analytics</span></div>
+      <div class="no-collect-item"><span class="icon">✓</span><span>No advertising SDKs</span></div>
+      <div class="no-collect-item"><span class="icon">✓</span><span>No third-party data sharing</span></div>
+      <div class="no-collect-item"><span class="icon">✓</span><span>No tracking frameworks</span></div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Third-Party Services</h2>
+    <h3>Open Food Facts</h3>
+    <p>When you search for food or scan a barcode, the app queries the <a href="https://world.openfoodfacts.org" target="_blank" rel="noopener">Open Food Facts</a> API — a public food product database. Your search query or scanned barcode is sent to their servers to retrieve nutritional information. No personal identifying information is included. See their <a href="https://world.openfoodfacts.org/privacy" target="_blank" rel="noopener">Privacy Policy</a>.</p>
+
+    <h3>Apple HealthKit (Optional — Pro Tier)</h3>
+    <p>If you connect Apple Health, the app:</p>
+    <ul>
+      <li><strong>Reads:</strong> Step count, active energy burned, and heart rate (for the Home dashboard)</li>
+      <li><strong>Writes:</strong> Body weight entries and completed workout sessions</li>
+    </ul>
+    <p>HealthKit data is governed by Apple's privacy policies and your device's Health settings. IT-Muscle does not transmit HealthKit data to any server.</p>
+
+    <h3>Apple In-App Purchases</h3>
+    <p>Purchase transactions are handled entirely by Apple's App Store infrastructure. IT-Muscle does not receive or store payment information. See <a href="https://www.apple.com/legal/privacy/" target="_blank" rel="noopener">Apple's Privacy Policy</a>.</p>
+  </section>
+
+  <section>
+    <h2>Camera and Photo Library</h2>
+    <ul>
+      <li><strong>Camera:</strong> Used exclusively for scanning food barcodes. No photos are taken or stored via this permission.</li>
+      <li><strong>Photo Library:</strong> Accessed only when you choose to add a progress photo. Photos are stored locally within the app's sandbox.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Notifications</h2>
+    <p>If enabled, local notifications (rest timer alerts, workout reminders) are scheduled entirely on-device. No notification data is sent to a server.</p>
+  </section>
+
+  <section>
+    <h2>Data Storage and Security</h2>
+    <p>All app data is stored in a local SQLite database within the app's private sandbox. This data is:</p>
+    <ul>
+      <li>Backed up by iCloud if you have iCloud Backup enabled for this app (iOS Settings → Your Name → iCloud → IT-Muscle Fitness)</li>
+      <li>Permanently deleted when you delete the app from your device</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Children's Privacy</h2>
+    <p>IT-Muscle Fitness is rated 4+ on the App Store. The app does not knowingly collect any information from children under 13. Because no personal data is collected or transmitted, the app complies with COPPA and similar regulations.</p>
+  </section>
+
+  <section>
+    <h2>Changes to This Policy</h2>
+    <p>We may update this Privacy Policy from time to time. The updated policy will be posted at <a href="https://it-muscle.com/privacy">it-muscle.com/privacy</a> with a new effective date. Continued use of the app after changes constitutes acceptance.</p>
+  </section>
+
+  <section>
+    <h2>Contact</h2>
+    <p>Questions about this Privacy Policy or data practices:</p>
+    <p>
+      <strong>Email:</strong> <a href="mailto:support@it-muscle.com">support@it-muscle.com</a><br>
+      <strong>Website:</strong> <a href="https://it-muscle.com/support">it-muscle.com/support</a>
+    </p>
+  </section>
+</main>
+
+<footer>
+  <p>© 2026 IT-Muscle. All rights reserved.</p>
+  <p><a href="https://it-muscle.com">it-muscle.com</a></p>
+  <p class="footer-tagline">IT-Muscle Fitness is built with your privacy as a design principle, not an afterthought.</p>
+</footer>
